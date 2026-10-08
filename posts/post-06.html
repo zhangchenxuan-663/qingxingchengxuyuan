@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java后端开发，到底该掌握哪些东西 - 清醒程序员</title>
+<meta name="description" content="别被培训机构的课程表吓到。Java后端开发的核心技能其实就五块：语言、框架、数据、中间件、工程化。本文给你一份实在的清单。">
+<meta name="keywords" content="Java后端,Java后端开发,Java工程师,后端开发技能,Java学习路线,Spring Boot">
+<link rel="canonical" href="https://qingxingchengxuyuan.com/posts/post-06.html">
+<style>
+  :root{--bg:#faf7f2;--ink:#2f2a22;--mut:#8a8066;--line:#e8e0d0;--accent:#7a6a4f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:"Songti SC","STSong",Georgia,serif;line-height:2;font-size:16px;}
+  .wrap{max-width:700px;margin:0 auto;padding:0 24px;}
+  header{border-bottom:1px solid var(--line);padding:24px 0 14px;}
+  .logo{font-size:20px;font-weight:700;letter-spacing:2px;}
+  .logo small{font-size:12px;color:var(--mut);letter-spacing:1px;font-weight:400;}
+  .article{padding:30px 0 40px;}
+  .article h1{font-size:26px;line-height:1.6;margin-bottom:10px;}
+  .article .meta{font-size:13px;color:var(--mut);margin-bottom:24px;}
+  .article h2{font-size:19px;margin:26px 0 12px;}
+  .article p{margin-bottom:16px;color:#3f392e;}
+  .article strong{color:var(--ink);}
+  .article ul{margin:0 0 16px 22px;color:#3f392e;}
+  .article li{margin-bottom:6px;}
+  .quote{border-left:3px solid var(--accent);padding-left:16px;color:var(--mut);font-style:italic;margin:20px 0;}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--mut);}
+  footer a{color:var(--mut);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">清醒程序员<small>把日子过明白 · 把工作干明白</small></div>
+  </header>
+
+  <div class="article">
+    <h1>Java后端开发，到底该掌握哪些东西</h1>
+    <div class="meta">2026-10-08 · 技术成长</div>
+
+    <p>刚入行或者想转后端的人，最容易犯的错是照着培训机构的课程表猛学：Spring、Spring Boot、微服务、消息队列、分布式、容器……学完发现，面试还是挂，工作还是不会。</p>
+    <p>原因很简单：技能树不是越多越好，而是有主次的。下面这份清单，是多数 Java 后端岗位真正会用到的核心，按优先级排好了。</p>
+
+    <h2>1. 语言基本功：这是你的下限</h2>
+    <p>Java 语法、集合、异常、泛型这些就不提了，重点在三块：</p>
+    <ul>
+      <li><strong>并发</strong>：synchronized、锁、线程池、CAS。后端一半的难题都跟并发沾边。</li>
+      <li><strong>JVM</strong>：内存模型、GC、调优参数。不要求你精通，但要能说清"对象是怎么被回收的"。</li>
+      <li><strong>IO</strong>：BIO/NIO/AIO 的区别，Netty 为什么快。面试高频，工作中也常用。</li>
+    </ul>
+
+    <h2>2. 框架：会 Spring Boot 就够了吗</h2>
+    <p>Spring Boot 是标配，重点是理解它的<strong>自动配置</strong>和 <strong>Bean 生命周期</strong>，而不是只会加注解。</p>
+    <p>再往上，Spring Cloud 的注册中心、配置中心、网关，用到再学。别在没实际业务的时候，把整套微服务组件背一遍——记不住也用不上。</p>
+
+    <h2>3. 数据：数据库才是后端的地基</h2>
+    <ul>
+      <li><strong>MySQL</strong>：索引原理、SQL 优化、事务隔离级别、锁。能讲清楚一条慢 SQL 怎么排查，就超过一半候选人。</li>
+      <li><strong>Redis</strong>：五种数据结构、缓存穿透/击穿/雪崩、分布式锁。后端必考。</li>
+      <li><strong>MyBatis / MyBatis-Plus</strong>：ORM 工具，熟练使用即可。</li>
+    </ul>
+
+    <h2>4. 中间件：够用就行，别贪多</h2>
+    <p>消息队列（RocketMQ / RabbitMQ / Kafka 选一个）、Elasticsearch，用到什么学什么。</p>
+    <p>判断标准很简单：你能说清"这个组件解决了什么问题、不引入它行不行"。能说清，就算掌握。</p>
+
+    <h2>5. 工程化：决定你能不能干活</h2>
+    <ul>
+      <li><strong>Git</strong>：分支管理、冲突解决、回滚。这是每天的必修课。</li>
+      <li><strong>Linux</strong>：日志排查、端口、进程、部署。不会 Linux 的后端是残废的。</li>
+      <li><strong>Docker + CI/CD</strong>：能把自己的代码打包、构建、部署出一条流水线。</li>
+      <li><strong>测试</strong>：单元测试、接口测试，别把"没测过"当"测过了"。</li>
+    </ul>
+
+    <div class="quote">技能清单是地图，不是终点。真正的成长，是在一个个真实问题里磨出来的。</div>
+
+    <p>最后一句实话：以上这些，不要求你入职前全学会。把语言、框架、数据这三块打牢，先能独立干活，中间件和工程化在工作中补，完全来得及。</p>
+    <p>别焦虑，慢慢来，把每一步走扎实，比什么都强。</p>
+  </div>
+
+  <footer>
+    <p><a href="index.html">← 返回首页</a></p>
+  </footer>
+</div>
+</body>
+</html>
