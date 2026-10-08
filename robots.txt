@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qingxingchengxuyuan.com/sitemap.xml

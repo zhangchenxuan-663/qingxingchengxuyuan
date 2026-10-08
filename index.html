@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>清醒程序员 - 程序员职场成长与认知提升</title>
+<meta name="description" content="面向程序员与技术从业者的职场清醒指南：告别内耗、职业规划、成长方法论、职场洞察。把日子过明白，把工作干明白。">
+<meta name="keywords" content="程序员,职场,成长,内耗,职业规划,技术人,认知提升">
+<link rel="canonical" href="https://example.com/">
+<style>
+  :root{--bg:#faf7f2;--ink:#2f2a22;--mut:#8a8066;--line:#e8e0d0;--accent:#7a6a4f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:"Songti SC","STSong",Georgia,serif;line-height:1.8;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  header{border-bottom:1px solid var(--line);padding:28px 0 18px;}
+  .logo{font-size:24px;font-weight:700;letter-spacing:2px;}
+  .logo small{display:block;font-size:13px;color:var(--mut);letter-spacing:1px;margin-top:4px;font-weight:400;}
+  nav{margin-top:12px;font-size:14px;color:var(--mut);}
+  nav a{color:var(--mut);text-decoration:none;margin-right:16px;}
+  nav a:hover{color:var(--accent);}
+  .hero{padding:40px 0 20px;}
+  .hero h1{font-size:28px;line-height:1.5;}
+  .hero p{margin-top:12px;color:var(--mut);font-size:15px;}
+  .list{padding:10px 0 40px;}
+  .post{border-bottom:1px solid var(--line);padding:22px 0;}
+  .post:last-child{border-bottom:none;}
+  .post h2{font-size:20px;line-height:1.5;}
+  .post h2 a{color:var(--ink);text-decoration:none;}
+  .post h2 a:hover{color:var(--accent);}
+  .post .meta{font-size:13px;color:var(--mut);margin-top:8px;}
+  .post .excerpt{font-size:15px;color:#5a5244;margin-top:10px;}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--mut);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">清醒程序员<small>把日子过明白 · 把工作干明白</small></div>
+    <nav><a href="index.html">首页</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>程序员，先别急着写代码<br>先把自己理顺</h1>
+    <p>这里不谈框架和语法，只谈技术人最容易被忽略的东西：职业倦怠、精神内耗、成长路径、怎么把日子过明白。</p>
+  </div>
+
+  <div class="list" id="posts"></div>
+
+  <footer>
+    <p>清醒程序员 · 持续更新 · 把日子过明白，把工作干明白</p>
+  </footer>
+</div>
+<script>
+  const posts=[
+    {title:"程序员的精神内耗，大多来自这3件事",date:"2026-10-08",excerpt:"加班、技术焦虑、三十五岁恐慌……程序员的内耗，往往不是能力问题，而是注意力放错了地方。",url:"posts/post-01.html"},
+    {title:"为什么你越努力，反而越焦虑？",date:"2026-10-08",excerpt:"努力本身不会让你焦虑，让焦虑的是'努力必须有即时回报'的执念。",url:"posts/post-02.html"},
+    {title:"程序员35岁危机，是真是假？怎么破",date:"2026-10-08",excerpt:"市场不淘汰35岁的人，市场淘汰'用3年经验重复了10年'的人。",url:"posts/post-03.html"},
+    {title:"加班是不是职场PUA？技术人该怎么看",date:"2026-10-08",excerpt:"判断加班的唯一标准：这件事值不值得你花掉这段时间。",url:"posts/post-04.html"}
+  ];
+  const el=document.getElementById('posts');
+  el.innerHTML=posts.map(p=>`<div class="post"><h2><a href="${p.url}">${p.title}</a></h2><div class="meta">${p.date}</div><div class="excerpt">${p.excerpt}</div></div>`).join('');
+</script>
+</body>
+</html>
