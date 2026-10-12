@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>技术债务不只是代码问题，也是心态问题 - 清醒程序员</title>
+<meta name="description" content="代码越写越乱，改一处崩三处，加班还债。技术债务表面是代码问题，根子往往是心态和决策问题。这篇聊聊怎么从源头少欠债。">
+<meta name="keywords" content="技术债务,代码质量,程序员心态,重构,代码维护">
+<link rel="canonical" href="https://qingxingchengxuyuan.com/posts/post-16.html">
+<style>
+  :root{--bg:#faf7f2;--ink:#2f2a22;--mut:#8a8066;--line:#e8e0d0;--accent:#7a6a4f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:"Songti SC","STSong",Georgia,serif;line-height:2;font-size:16px;}
+  .wrap{max-width:700px;margin:0 auto;padding:0 24px;}
+  header{border-bottom:1px solid var(--line);padding:24px 0 14px;}
+  .logo{font-size:20px;font-weight:700;letter-spacing:2px;}
+  .logo small{font-size:12px;color:var(--mut);letter-spacing:1px;font-weight:400;}
+  .article{padding:30px 0 40px;}
+  .article h1{font-size:26px;line-height:1.6;margin-bottom:10px;}
+  .article .meta{font-size:13px;color:var(--mut);margin-bottom:24px;}
+  .article h2{font-size:19px;margin:26px 0 12px;}
+  .article p{margin-bottom:16px;color:#3f392e;}
+  .article strong{color:var(--ink);}
+  .article ul{margin:0 0 16px 22px;color:#3f392e;}
+  .article li{margin-bottom:6px;}
+  .quote{border-left:3px solid var(--accent);padding-left:16px;color:var(--mut);font-style:italic;margin:20px 0;}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--mut);}
+  footer a{color:var(--mut);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">清醒程序员<small>把日子过明白 · 把工作干明白</small></div>
+  </header>
+
+  <div class="article">
+    <h1>技术债务不只是代码问题，也是心态问题</h1>
+    <div class="meta">2026-10-12 · 代码与成长</div>
+
+    <p>说到技术债务，多数人想到的是"代码写得烂、到处是补丁、改一处崩三处"。但追到根子上，债务往往不是写代码时欠下的，而是决策和心态欠下的。</p>
+
+    <h2>债务是怎么欠下的</h2>
+    <p>技术债务最常见的三种来源：</p>
+    <ul>
+      <li><strong>赶时间</strong>："先上线再说，后面重构"——然后后面永远没有来。</li>
+      <li><strong>怕麻烦</strong>：知道该抽象、该分层，但嫌麻烦，先糊一个能用的。</li>
+      <li><strong>不敢说</strong>：需求不合理、排期不现实，不敢提，硬扛着写出一堆临时方案。</li>
+    </ul>
+    <p>看出来了吗？前两个是心态：贪快、怕累。第三个也是心态：怕冲突、怕被否定。债是还的，不是欠的，根子全在人身上。</p>
+
+    <h2>为什么说"心态问题"最要命</h2>
+    <p>代码层面的债，重构几次总能还清。心态层面的债才麻烦：</p>
+    <ul>
+      <li>习惯了"先凑合"，标准就越来越低，慢慢觉得"能跑就行"很正常。</li>
+      <li>不敢为质量争取时间，永远被 deadline 追着跑，永远在赶工。</li>
+      <li>出了问题先甩锅给"历史代码"，自己却不想为未来负责。</li>
+    </ul>
+    <p>技术债不可怕，可怕的是你习以为常，甚至把还债当成了常态的加班。</p>
+
+    <h2>怎么从源头少欠债</h2>
+    <h3>把"留债"变成"记账"</h3>
+    <p>实在要赶工可以，但要把临时方案明确记下来：哪块是临时的、为什么临时、打算什么时候还。债务看不见才会一直拖，看得见就总有还的一天。</p>
+
+    <h3>学会为质量谈判</h3>
+    <p>面对不合理的排期，认真算一笔账：现在赶工省两天，未来维护多花二十天。把账摆出来，有理有据地和需求方谈，而不是默默硬扛。多数时候，对方只是不知道代价。</p>
+
+    <h3>每次改动顺手还一点</h3>
+    <p>不需要专门大重构。每次经过一块烂代码，顺手清理一下命名、删掉死代码、补个注释。积少成多，债务会肉眼可见地变少，心态也会轻松很多。</p>
+
+    <div class="quote">技术债务还的是代码，欠的是判断。管好自己的判断，债务就少一半。</div>
+
+    <h2>最后</h2>
+    <p>下次写代码前，先问自己一句：这个方案，是我认真权衡过的，还是我在将就？这个问题的答案，决定你是债主还是欠债人。代码可以重构，判断力要趁早练。</p>
+  </div>
+
+  <footer>
+    <p><a href="../index.html">← 返回首页</a></p>
+  </footer>
+</div>
+</body>
+</html>
