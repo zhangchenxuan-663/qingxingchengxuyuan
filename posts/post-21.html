@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>为什么你的代码总被review出问题 - 清醒程序员</title>
+<meta name="description" content="代码评审总是被挑出一堆问题？不是你技术不行，是没搞清楚评审在看什么。这篇聊聊评审的真正逻辑，以及怎么让代码少被挑刺。">
+<meta name="keywords" content="代码评审,Code Review,程序员成长,代码质量,评审意见">
+<link rel="canonical" href="https://qingxingchengxuyuan.com/posts/post-21.html">
+<style>
+  :root{--bg:#faf7f2;--ink:#2f2a22;--mut:#8a8066;--line:#e8e0d0;--accent:#7a6a4f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:"Songti SC","STSong",Georgia,serif;line-height:2;font-size:16px;}
+  .wrap{max-width:700px;margin:0 auto;padding:0 24px;}
+  header{border-bottom:1px solid var(--line);padding:24px 0 14px;}
+  .logo{font-size:20px;font-weight:700;letter-spacing:2px;}
+  .logo small{font-size:12px;color:var(--mut);letter-spacing:1px;font-weight:400;}
+  .article{padding:30px 0 40px;}
+  .article h1{font-size:26px;line-height:1.6;margin-bottom:10px;}
+  .article .meta{font-size:13px;color:var(--mut);margin-bottom:24px;}
+  .article h2{font-size:19px;margin:26px 0 12px;}
+  .article p{margin-bottom:16px;color:#3f392e;}
+  .article strong{color:var(--ink);}
+  .article ul{margin:0 0 16px 22px;color:#3f392e;}
+  .article li{margin-bottom:6px;}
+  .quote{border-left:3px solid var(--accent);padding-left:16px;color:var(--mut);font-style:italic;margin:20px 0;}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--mut);}
+  footer a{color:var(--mut);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">清醒程序员<small>把日子过明白 · 把工作干明白</small></div>
+  </header>
+
+  <div class="article">
+    <h1>为什么你的代码总被review出问题</h1>
+    <div class="meta">2026-10-13 · 工程素养</div>
+
+    <p>提交代码，被提了七八条意见；改完再提，又有新的问题。一次两次还好，次次如此就有点难受了：是不是我技术不行？其实多数时候不是，是你还没搞懂评审到底在看什么。</p>
+
+    <h2>评审不是在挑刺，是在"降低风险"</h2>
+    <p>评审者的第一诉求不是"证明你写得不好"，而是"这代码上线别出事"。所以他的注意力天然集中在：</p>
+    <ul>
+      <li>逻辑有没有漏洞、边界有没有处理。</li>
+      <li>有没有改一处坏一处。</li>
+      <li>别人接手时看不看得懂。</li>
+    </ul>
+    <p>想明白这一点，很多意见就说得通了——他要的是"稳"，不是"炫"。</p>
+
+    <h2>总被挑出问题的五个常见原因</h2>
+    <h3>1. 一次提交塞了太多东西</h3>
+    <p>一个 PR 又改功能又改样式又重构，评审的人看着就头大，问题自然多。拆小提交：一个提交只做一件事，评审轻松，你也少挨批。</p>
+
+    <h3>2. 只写代码，不写说明</h3>
+    <p>提交信息写个"fix bug"，评审完全不知道你改了啥、为什么改。加上两三句背景说明："这里因为某某场景加了判空"，评审理解成本骤降。</p>
+
+    <h3>3. 命名全靠猜</h3>
+    <p>变量叫 <code>data1</code>、方法叫 <code>doIt</code>，评审第一反应就是"看不懂，有风险"。命名就是写注释，名字起清楚了，一半意见会消失。</p>
+
+    <h3>4. 不处理边界情况</h3>
+    <p>空值、超长、并发、异常分支——你只写了"正常情况"，评审必须替你补上所有"不正常情况"的意见。</p>
+
+    <h3>5. 改完不复查</h3>
+    <p>自己提交前不看一遍 diff，把明显的问题留给人挑。提交前花五分钟通读自己的 diff，至少能消掉三成低级意见。</p>
+
+    <h2>怎么让代码少被挑刺</h2>
+    <ul>
+      <li>提交前自己先 review 一遍，站在"挑刺者"角度看自己的代码。</li>
+      <li>写清楚提交说明和改动背景，降低对方的理解成本。</li>
+      <li>把大改动拆成小步，一次一个主题。</li>
+      <li>被提意见别急着反驳，先想"他担心的是什么风险"，再决定改还是解释。</li>
+    </ul>
+
+    <div class="quote">评审意见不是对你能力的判决，是对代码风险的清单。清单越少，说明你把风险提前处理得越好。</div>
+
+    <h2>最后</h2>
+    <p>被 review 出问题不可怕，可怕的是每次都栽在同样的坑里。把意见分类记下来：命名、边界、粒度、说明——两周后你会发现，不是评审变宽容了，是你的代码真的变好了。</p>
+  </div>
+
+  <footer>
+    <p><a href="../index.html">← 返回首页</a></p>
+  </footer>
+</div>
+</body>
+</html>
