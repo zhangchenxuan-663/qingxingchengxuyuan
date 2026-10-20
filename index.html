@@ -29,6 +29,8 @@
   .post h2 a:hover{color:var(--accent);}
   .post .meta{font-size:13px;color:var(--mut);margin-top:8px;}
   .post .excerpt{font-size:15px;color:#5a5244;margin-top:10px;}
+  .btn{display:inline-block;margin-top:12px;padding:8px 20px;border:1px solid var(--accent);border-radius:4px;color:var(--accent);text-decoration:none;font-size:14px;transition:all .2s;}
+  .btn:hover{background:var(--accent);color:#fff;}
   footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--mut);}
 </style>
 </head>
@@ -90,7 +92,7 @@
     {title:"转行还是深耕？年轻人躲35岁危机的两种走法",date:"2026-10-19",excerpt:"35岁危机面前，转行还是深耕不是对错题，是匹配题。看清自己的牌，再选路。",url:"posts/post-36.html"}
   ];
   const el=document.getElementById('posts');
-  el.innerHTML=posts.map(p=>`<div class="post"><h2><a href="${p.url}">${p.title}</a></h2><div class="meta">${p.date}</div><div class="excerpt">${p.excerpt}</div></div>`).join('');
+  el.innerHTML=posts.map(p=>`<div class="post"><h2><a href="${p.url}">${p.title}</a></h2><div class="meta">${p.date}</div><div class="excerpt">${p.excerpt}</div><a class="btn" href="${p.url}">阅读全文 →</a></div>`).join('');
 </script>
 </body>
 </html>
