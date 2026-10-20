@@ -92,7 +92,7 @@
     {title:"转行还是深耕？年轻人躲35岁危机的两种走法",date:"2026-10-19",excerpt:"35岁危机面前，转行还是深耕不是对错题，是匹配题。看清自己的牌，再选路。",url:"posts/post-36.html"}
   ];
   const el=document.getElementById('posts');
-  el.innerHTML=posts.map(p=>`<div class="post"><h2><a href="${p.url}">${p.title}</a></h2><div class="meta">${p.date}</div><div class="excerpt">${p.excerpt}</div><a class="btn" href="${p.url}">阅读全文 →</a></div>`).join('');
+  el.innerHTML=[...posts].reverse().map(p=>`<div class="post"><h2><a href="${p.url}">${p.title}</a></h2><div class="meta">${p.date}</div><div class="excerpt">${p.excerpt}</div><a class="btn" href="${p.url}">阅读全文 →</a></div>`).join('');
 </script>
 </body>
 </html>
