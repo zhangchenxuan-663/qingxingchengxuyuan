@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 落地：做出来是一回事，跑稳是另一回事 - 清醒程序员</title>
+<meta name="description" content="AI Agent 做出来容易，跑稳很难。这篇拆解 Agent 落地的真实难点：边界、兜底、监控、迭代，以及它对程序员意味着什么。">
+<meta name="keywords" content="AI Agent落地,Agent稳定运行,程序员Agent开发,AI应用开发">
+<link rel="canonical" href="https://qingxingchengxuyuan.com/posts/post-45.html">
+<style>
+  :root{--bg:#faf7f2;--ink:#2f2a22;--mut:#8a8066;--line:#e8e0d0;--accent:#7a6a4f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:"Songti SC","STSong",Georgia,serif;line-height:2;font-size:16px;}
+  .wrap{max-width:700px;margin:0 auto;padding:0 24px;}
+  header{border-bottom:1px solid var(--line);padding:24px 0 14px;}
+  .logo{font-size:20px;font-weight:700;letter-spacing:2px;}
+  .logo small{font-size:12px;color:var(--mut);letter-spacing:1px;font-weight:400;}
+  .article{padding:30px 0 40px;}
+  .article h1{font-size:26px;line-height:1.6;margin-bottom:10px;}
+  .article .meta{font-size:13px;color:var(--mut);margin-bottom:24px;}
+  .article h2{font-size:19px;margin:26px 0 12px;}
+  .article p{margin-bottom:16px;color:#3f392e;}
+  .article strong{color:var(--ink);}
+  .article ul{margin:0 0 16px 22px;color:#3f392e;}
+  .article li{margin-bottom:6px;}
+  .quote{border-left:3px solid var(--accent);padding-left:16px;color:var(--mut);font-style:italic;margin:20px 0;}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--mut);}
+  footer a{color:var(--mut);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">清醒程序员<small>把日子过明白 · 把工作干明白</small></div>
+  </header>
+
+  <div class="article">
+    <h1>AI Agent 落地：做出来是一回事，跑稳是另一回事</h1>
+    <div class="meta">2026-10-24 · 科技热点解读</div>
+
+    <p>去年"AI Agent"还是 PPT 里的词，今年开始有团队真做了。可我发现一个普遍现象：<strong>Demo 都漂亮，一上线就现原形</strong>。做个 Agent 出来容易，让它天天跑、不崩、不出错，才是真功夫。这篇聊聊 Agent 落地到底难在哪，以及为什么这对程序员是个实在的机会。</p>
+
+    <h2>做出来 vs 跑稳，差在哪</h2>
+    <p>Demo 里，你喂它一个需求，它哗哗干完，看着很神。一进真实业务就露馅：<strong>边界不清</strong>（它不知道哪些该碰哪些不该碰）、<strong>状态会乱</strong>（跑着跑着上下文丢了）、<strong>出错没人管</strong>（它做错了也没人发现）。这三件事，Demo 里根本看不出来，跑起来全是坑。</p>
+
+    <h2>跑稳的四个关键</h2>
+    <ul>
+      <li><strong>划清边界。</strong>Agent 不是全能的，要给它画清楚"能干什么、不能干什么、拿不准就问人"。边界越清晰，它越不敢乱来。</li>
+      <li><strong>做好兜底。</strong>它出错时，要有熔断、有回退、有"叫人"机制。别让它一个错误一路传播，把整个流程带崩。</li>
+      <li><strong>全程监控。</strong>它的每一步要能看得见、查得到。跑挂了能定位是哪一步的问题，而不是黑盒。</li>
+      <li><strong>持续迭代。</strong>Agent 不是上线就完事，要不断喂反馈、修边界、补规则，是个长期养的过程。</li>
+    </ul>
+
+    <div class="quote">Agent 像是个新来的实习生：上手快，但得有人给它划规矩、盯作业、擦屁股。那个"带它的人"，就是现在的程序员。</div>
+
+    <h2>对普通程序员意味着什么</h2>
+    <p>别被"Agent 会取代程序员"的焦虑带跑。恰恰相反，Agent 落地最缺的不是能写 Agent 的人，是<strong>能把 Agent 管稳、兜得住底的人</strong>——而这是有业务经验的普通开发者的强项。你会写代码、懂业务、踩过坑，天然就是那个能"带实习生"的人。</p>
+    <p>所以我的建议是：别把 Agent 当威胁躲着走，把它当一门新手艺主动学。先在项目里搭个小的、能跑的，把它管稳的经验攒起来。这个能力，未来几年会越来越值钱。</p>
+  </div>
+
+  <footer>
+    <p><a href="../index.html">← 返回首页</a></p>
+  </footer>
+</div>
+</body>
+</html>
